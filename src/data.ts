@@ -71,9 +71,9 @@ export const experience: ExperienceItem[] = [
   },
   {
     timeframe: '2023 – 2025',
-    role: 'Post-Graduate Student',
-    org: 'Lambton College',
-    summary: 'Full-Stack Software Development program with hands-on WIL project.',
+    role: 'Post-Graduate Certificate in Full-Stack Software Development',
+    org: 'Lambton College, Toronto',
+    summary: 'Completed Post-Graduate Certificate focused on modern full-stack engineering with a hands-on WIL project.',
     details: [ 'Frontend Developer on WIL project', 'Applied modern React patterns and state management' ]
   },
   {
