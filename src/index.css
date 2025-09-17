@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white dark:bg-neutral-950 text-neutral-800 dark:text-neutral-200 antialiased selection:bg-primary-500/80 selection:text-white relative;
+    background-image: radial-gradient(circle at 20% 20%, theme('colors.primary.500')/8 0, transparent 60%), radial-gradient(circle at 80% 60%, theme('colors.primary.600')/6 0, transparent 55%);
+    background-attachment: fixed;
+  }
+}
+
+/* Reusable component classes */
+@layer components {
+  .container-section { @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8; }
+  .headline-gradient { @apply bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 bg-clip-text text-transparent; }
+  .card { @apply rounded-xl border border-neutral-200/60 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow; }
+  .tag { @apply inline-flex items-center rounded-md bg-primary-500/10 text-primary-600 dark:text-primary-400 px-2 py-1 text-xs font-medium ring-1 ring-inset ring-primary-500/20; }
+  .focus-ring { @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-neutral-950; }
+}
+
+/* Utilities extensions */
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
