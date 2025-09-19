@@ -81,7 +81,7 @@ export const experience: ExperienceItem[] = [
     role: 'Software Engineer Intern',
     org: 'Vibes Meet LLC',
     summary: 'Mobile + backend engineering for social video platform.',
-    details: [ 'Implemented adaptive video player with caption overlays', 'Integrated cloud storage and delivery workflows' ]
+    details: [ 'Implemented adaptive video player with caption overlays', 'Integrated cloud storage and delivery workflows', 'Integrated Apple Pay and Google Pay with Stripe' ]
   }
 ];
 
