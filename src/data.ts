@@ -1,7 +1,7 @@
 // Central structured data for portfolio sections
 export const profile = {
   name: 'Abdullah Al Mamun Apu',
-  role: 'Full-Stack / Frontend Developer',
+  role: 'Full-Stack Developer | React & Node.js Specialist',
   location: 'Toronto, ON, Canada',
   email: 'almamun.codes@gmail.com',
   links: {
@@ -9,7 +9,7 @@ export const profile = {
     linkedin: 'https://linkedin.com/in/almamun-in',
     portfolio: 'https://mamunapu.tech'
   },
-  summary: `Post-Graduate in Full-Stack Software Development (Lambton College), B.Sc. in Computer Science (East West University). 2+ years of professional experience across web & mobile engineering with a focus on building performant, scalable, and maintainable applications. Passionate about solving complex problems and continuous learning.`
+  summary: `Helping startups and businesses build fast, scalable web applications with React, Node.js, and cloud technologies. 2+ years of experience delivering performant solutions for e-commerce, SaaS, and real-time applications. Passionate about solving complex problems and continuous learning.`
 };
 
 export interface SkillCategory { title: string; items: string[] }
