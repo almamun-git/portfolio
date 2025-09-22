@@ -8,6 +8,7 @@ import { profile, skills, experience, contactCTA } from './data';
 import { Suspense, lazy } from 'react';
 const ProjectsGrid = lazy(() => import('./components/ProjectsGrid').then(m => ({ default: m.ProjectsGrid })));
 import { ContactForm } from './components/ContactForm';
+import { AnimatedTitles } from './components/AnimatedTitles';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <div className="flex flex-col gap-6 md:flex-row md:items-start">
             <div className="flex-1 space-y-4">
               <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-balance headline-gradient">{profile.name}</h1>
+              <AnimatedTitles />
               <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed text-balance">{profile.summary}</p>
               <ul className="flex flex-wrap gap-3 text-sm">
                 <li className="tag">Toronto, Canada</li>
