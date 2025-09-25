@@ -14,6 +14,7 @@ A modern, single-page portfolio built with **Vite + React + TypeScript + Tailwin
 - Code splitting: projects grid lazy-loaded to trim initial bundle
 - CI workflow (`.github/workflows/ci.yml`) – install, lint, build, artifact upload
 - Radial background + subtle glass cards + gradient headline
+- Radial background + subtle glass cards + gradient headline
 - Honeypot + mailto-based contact form (no backend required)
 
 ## 🛠 Tech Stack
@@ -67,6 +68,8 @@ Update data in `src/data.ts`:
 - Framer Motion entrance animations (respect reduced motion)
 - Lighthouse performance budget & bundle analyzer
 - Internationalization (i18n) scaffold
+ - Option to toggle decorative background intensity
+
 
 ## ✅ Accessibility & UX Considerations
 - Logical heading hierarchy
