@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
 const titles = [
-  'Full-Stack Software Developer',
+  'Full-Stack Developer',
+  'Mobile App Developer (React Native)',
   'Frontend Developer (React / Next.js)',
   'Backend Developer (Django, Java / Spring Boot)',
-  'Mobile App Developer (React Native)',
   'Software Engineer',
 ];
 
@@ -16,7 +16,7 @@ export const AnimatedTitles = () => {
 
   useEffect(() => {
     const currentTitle = titles[currentIndex];
-    const typingSpeed = isDeleting ? 75 : 150; // Slower typing for smoother effect
+    const typingSpeed = isDeleting ? 30 : 70; 
 
     if (isWaiting) return;
 
@@ -31,7 +31,7 @@ export const AnimatedTitles = () => {
           setTimeout(() => {
             setIsWaiting(false);
             setIsDeleting(true);
-          }, 2500); // Longer pause after typing
+          }, 1500); // Shorter pause after typing
         }
       } else if (isDeleting) {
         // Deleting
@@ -44,7 +44,7 @@ export const AnimatedTitles = () => {
             setIsWaiting(false);
             setIsDeleting(false);
             setCurrentIndex((prevIndex) => (prevIndex + 1) % titles.length);
-          }, 1000); // Pause before starting next title
+          }, 300); // Even shorter pause before starting next title
         }
       }
     }, typingSpeed);
