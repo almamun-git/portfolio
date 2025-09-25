@@ -1,5 +1,3 @@
-import React from 'react';
-
 /*
   Decorative background layers:
   - Subtle animated radial gradient glow
