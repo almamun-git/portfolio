@@ -30,8 +30,10 @@ export function ContactForm() {
         formEl.reset();
         setStatus('sent');
         return;
-      } catch (err:any) {
-        console.warn('Contact endpoint failed, falling back to mailto', err);
+      } catch (err: unknown) {
+        // Normalize unknown error for logging
+        const message = err instanceof Error ? err.message : String(err);
+        console.warn('Contact endpoint failed, falling back to mailto', message);
         setError('Network send failed, opening mail client...');
       }
     }

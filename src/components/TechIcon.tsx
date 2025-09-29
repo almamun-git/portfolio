@@ -1,7 +1,7 @@
-import type { ComponentType } from 'react';
+import type { ComponentType, SVGProps } from 'react';
 import { SiReact, SiNextdotjs, SiRedux, SiTypescript, SiJavascript, SiTailwindcss, SiNodedotjs, SiDjango, SiSpringboot, SiOpenapiinitiative, SiMysql, SiMongodb, SiPostgresql, SiGithub, SiJira, SiDocker, SiScrumalliance, SiBlueprint, SiBookstack, SiTensorflow, SiExpo, SiCoder } from '@icons-pack/react-simple-icons';
 
-const ICONS: Record<string, ComponentType<any>> = {
+const ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   SiReact, SiNextdotjs, SiRedux, SiTypescript, SiJavascript, SiTailwindcss, SiNodedotjs, SiDjango, SiSpringboot, SiOpenapiinitiative, SiMysql, SiMongodb, SiPostgresql, SiGithub, SiJira, SiDocker, SiScrumalliance, SiBlueprint, SiBookstack, SiTensorflow, SiExpo, SiCoder
 };
 
@@ -39,5 +39,6 @@ interface TechIconProps { name: string; size?: number; className?: string; label
 export function TechIcon({ name, size = 18, className = '', label }: TechIconProps) {
   const key = NAME_MAP[name] || NAME_MAP[label || ''] || 'SiCoder';
   const Icon = ICONS[key] || SiCoder;
-  return <Icon title={label || name} size={size} className={className} />;
+  // svg props like title for accessibility
+  return <Icon title={label || name} size={size} className={className} aria-hidden={false} role="img" />;
 }
