@@ -1,13 +1,22 @@
 import { profile } from '../data';
 import { TechIcon } from './TechIcon';
 
-const nav = [
+const navigation = [
   { href: '#about', label: 'About' },
   { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
   { href: '#experience', label: 'Experience' },
   { href: '#contact', label: 'Contact' }
-];
+] as const;
+
+const keyTechnologies = [
+  'React',
+  'TypeScript', 
+  'Django/DRF',
+  'PostgreSQL',
+  'AWS (S3, CloudFront)',
+  'Docker'
+] as const;
 
 export function Footer() {
   return (
@@ -27,16 +36,29 @@ export function Footer() {
           <div className="md:mx-auto">
             <h4 className="text-sm font-semibold tracking-wide uppercase mb-4 text-neutral-700 dark:text-neutral-300">Navigate</h4>
             <ul className="grid grid-cols-2 gap-2 text-sm">
-              {nav.map(item => (
-                <li key={item.href}><a href={item.href} className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{item.label}</a></li>
+              {navigation.map(item => (
+                <li key={item.href}>
+                  <a 
+                    href={item.href} 
+                    className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
           <div className="space-y-4">
             <h4 className="text-sm font-semibold tracking-wide uppercase text-neutral-700 dark:text-neutral-300">Key Stack</h4>
             <ul className="flex flex-wrap gap-3 text-xs">
-              {['React','TypeScript','Django/DRF','PostgreSQL','AWS (S3, CloudFront)','Docker'].map(t => (
-                <li key={t} className="flex items-center gap-1 px-2 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"><TechIcon name={t} size={14} /> {t.replace(' (S3, CloudFront)','')}</li>
+              {keyTechnologies.map(tech => (
+                <li 
+                  key={tech} 
+                  className="flex items-center gap-1 px-2 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
+                >
+                  <TechIcon name={tech} size={14} /> 
+                  {tech.replace(' (S3, CloudFront)', '')}
+                </li>
               ))}
             </ul>
             <div className="pt-2 text-xs text-neutral-500 dark:text-neutral-500 leading-relaxed">
