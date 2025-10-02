@@ -1,4 +1,3 @@
-// @ts-nocheck
 import type { ComponentType, SVGProps } from 'react';
 import {
   SiReact,
@@ -82,20 +81,23 @@ const NAME_MAP: Record<string, string> = {
   'Expo': 'SiExpo'
 };
 
-interface TechIconProps { name: string; size?: number; className?: string; label?: string }
+interface TechIconProps { 
+  name: string; 
+  size?: number; 
+  className?: string; 
+  label?: string;
+}
+
 export function TechIcon({ name, size = 18, className = '', label }: TechIconProps) {
   const key = NAME_MAP[name] || NAME_MAP[label || ''] || 'SiCoder';
-  const RawIcon = ICONS[key] || SiCoder;
-  const Icon = RawIcon as unknown as ComponentType<SVGProps<SVGSVGElement>>;
-  // Use aria-label and explicit width/height instead of a non-standard `title` prop.
-  // `aria-label` provides the accessible name that tests look for.
+  const Icon = ICONS[key] || SiCoder;
+  
   return (
     <Icon
       aria-label={label || name}
       width={size}
       height={size}
       className={className}
-      aria-hidden={false}
       role="img"
     />
   );
