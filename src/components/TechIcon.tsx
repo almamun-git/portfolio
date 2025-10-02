@@ -22,6 +22,8 @@ import {
   SiTensorflow,
   SiExpo,
   SiCoder,
+  SiAmazonaws,
+  SiOracle,
 } from '@icons-pack/react-simple-icons';
 
 // Explicit string-keyed map of icon components. This avoids using dynamic variable
@@ -49,6 +51,8 @@ const ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   SiTensorflow: SiTensorflow,
   SiExpo: SiExpo,
   SiCoder: SiCoder,
+  SiAmazonaws: SiAmazonaws,
+  SiOracle: SiOracle,
 };
 
 // Map human-readable names to simple-icons export keys
@@ -66,12 +70,10 @@ const NAME_MAP: Record<string, string> = {
   'MySQL': 'SiMysql',
   'MongoDB': 'SiMongodb',
   'PostgreSQL': 'SiPostgresql',
-  // Oracle/PL SQL not available in package; fallback icon used
-  'PL/SQL': 'SiCoder',
+  'PL/SQL': 'SiOracle',
   'Git/GitHub': 'SiGithub',
   'Jira': 'SiJira',
-  // AWS icon name differs (SiAmazonaws not exported); using generic cloud (reuse React icon as placeholder or choose another). For now fallback:
-  'AWS (S3, CloudFront)': 'SiCoder',
+  'AWS (S3, CloudFront)': 'SiAmazonaws',
   'Docker': 'SiDocker',
   'Agile': 'SiScrumalliance',
   'OOP': 'SiBlueprint',
