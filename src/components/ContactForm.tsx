@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { useState } from 'react';
 
 export function ContactForm() {
@@ -34,8 +33,9 @@ export function ContactForm() {
       } catch (err: unknown) {
         // Normalize unknown error for logging
         const message = err instanceof Error ? err.message : String(err);
-        console.warn('Contact endpoint failed, falling back to mailto', message);
-        setError('Network send failed, opening mail client...');
+        console.warn('Contact endpoint failed, falling back to mailto:', message);
+        setError('Network error occurred. Opening mail client as fallback...');
+        setStatus('error');
       }
     }
 
@@ -69,9 +69,10 @@ export function ContactForm() {
           {status==='sending' ? (endpoint ? 'Sending…' : 'Opening Mail…') : status==='sent' ? 'Sent ✔' : 'Send Message'}
         </button>
         <span aria-live="polite" role="status" className="text-xs min-h-[1.25em]">
-          {status==='sent' && <span className="text-green-600 dark:text-green-400">Message sent{endpoint ? ' successfully.' : ' (via mail client).'}</span>}
+          {status==='sent' && <span className="text-green-600 dark:text-green-400">Message sent{endpoint ? ' successfully!' : ' (via mail client).'}</span>}
           {status==='sending' && !endpoint && <span className="text-neutral-500">Launching email app…</span>}
-          {error && status!=='sent' && <span className="text-amber-600 dark:text-amber-400">{error}</span>}
+          {status==='error' && <span className="text-amber-600 dark:text-amber-400">{error}</span>}
+          {error && status!=='sent' && status!=='error' && <span className="text-amber-600 dark:text-amber-400">{error}</span>}
         </span>
       </div>
       {!endpoint && <p className="text-[11px] text-neutral-500 dark:text-neutral-500">Tip: Provide an API endpoint via <code className="font-mono">VITE_CONTACT_ENDPOINT</code> to enable direct submissions.</p>}
