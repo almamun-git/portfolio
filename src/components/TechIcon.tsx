@@ -22,8 +22,8 @@ import {
   SiTensorflow,
   SiExpo,
   SiCoder,
-  SiAmazonaws,
-  SiOracle,
+  SiCloudflare,
+  SiH2database,
 } from '@icons-pack/react-simple-icons';
 
 // Explicit string-keyed map of icon components. This avoids using dynamic variable
@@ -51,8 +51,8 @@ const ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   SiTensorflow: SiTensorflow,
   SiExpo: SiExpo,
   SiCoder: SiCoder,
-  SiAmazonaws: SiAmazonaws,
-  SiOracle: SiOracle,
+  SiCloudflare: SiCloudflare,
+  SiH2database: SiH2database,
 };
 
 // Map human-readable names to simple-icons export keys
@@ -70,10 +70,10 @@ const NAME_MAP: Record<string, string> = {
   'MySQL': 'SiMysql',
   'MongoDB': 'SiMongodb',
   'PostgreSQL': 'SiPostgresql',
-  'PL/SQL': 'SiOracle',
+  'PL/SQL': 'SiH2database',
   'Git/GitHub': 'SiGithub',
   'Jira': 'SiJira',
-  'AWS (S3, CloudFront)': 'SiAmazonaws',
+  'AWS (S3, CloudFront)': 'SiCloudflare',
   'Docker': 'SiDocker',
   'Agile': 'SiScrumalliance',
   'OOP': 'SiBlueprint',

@@ -1,4 +1,5 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+/// <reference types="vitest/globals" />
+import { render, screen, fireEvent } from '@testing-library/react';
 import { ContactForm } from '../ContactForm';
 
 describe('ContactForm', () => {
@@ -34,9 +35,18 @@ describe('ContactForm', () => {
   });
 
   it('displays helpful tip when no endpoint is configured', () => {
+    // Mock environment to ensure no endpoint is set
+    const originalEnv = import.meta.env.VITE_CONTACT_ENDPOINT;
+    delete (import.meta.env as Record<string, unknown>).VITE_CONTACT_ENDPOINT;
+    
     render(<ContactForm />);
     
     expect(screen.getByText(/tip: provide an api endpoint/i)).toBeInTheDocument();
     expect(screen.getByText(/VITE_CONTACT_ENDPOINT/)).toBeInTheDocument();
+    
+    // Restore original environment
+    if (originalEnv !== undefined) {
+      (import.meta.env as Record<string, unknown>).VITE_CONTACT_ENDPOINT = originalEnv;
+    }
   });
 });
