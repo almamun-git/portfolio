@@ -1,4 +1,3 @@
-// @ts-nocheck
 import type { ComponentType, SVGProps } from 'react';
 import {
   SiReact,
@@ -23,6 +22,8 @@ import {
   SiTensorflow,
   SiExpo,
   SiCoder,
+  SiCloudflare,
+  SiH2database,
 } from '@icons-pack/react-simple-icons';
 
 // Explicit string-keyed map of icon components. This avoids using dynamic variable
@@ -50,6 +51,8 @@ const ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   SiTensorflow: SiTensorflow,
   SiExpo: SiExpo,
   SiCoder: SiCoder,
+  SiCloudflare: SiCloudflare,
+  SiH2database: SiH2database,
 };
 
 // Map human-readable names to simple-icons export keys
@@ -67,12 +70,10 @@ const NAME_MAP: Record<string, string> = {
   'MySQL': 'SiMysql',
   'MongoDB': 'SiMongodb',
   'PostgreSQL': 'SiPostgresql',
-  // Oracle/PL SQL not available in package; fallback icon used
-  'PL/SQL': 'SiCoder',
+  'PL/SQL': 'SiH2database',
   'Git/GitHub': 'SiGithub',
   'Jira': 'SiJira',
-  // AWS icon name differs (SiAmazonaws not exported); using generic cloud (reuse React icon as placeholder or choose another). For now fallback:
-  'AWS (S3, CloudFront)': 'SiCoder',
+  'AWS (S3, CloudFront)': 'SiCloudflare',
   'Docker': 'SiDocker',
   'Agile': 'SiScrumalliance',
   'OOP': 'SiBlueprint',
@@ -82,20 +83,23 @@ const NAME_MAP: Record<string, string> = {
   'Expo': 'SiExpo'
 };
 
-interface TechIconProps { name: string; size?: number; className?: string; label?: string }
+interface TechIconProps { 
+  name: string; 
+  size?: number; 
+  className?: string; 
+  label?: string;
+}
+
 export function TechIcon({ name, size = 18, className = '', label }: TechIconProps) {
   const key = NAME_MAP[name] || NAME_MAP[label || ''] || 'SiCoder';
-  const RawIcon = ICONS[key] || SiCoder;
-  const Icon = RawIcon as unknown as ComponentType<SVGProps<SVGSVGElement>>;
-  // Use aria-label and explicit width/height instead of a non-standard `title` prop.
-  // `aria-label` provides the accessible name that tests look for.
+  const Icon = ICONS[key] || SiCoder;
+  
   return (
     <Icon
       aria-label={label || name}
       width={size}
       height={size}
       className={className}
-      aria-hidden={false}
       role="img"
     />
   );
