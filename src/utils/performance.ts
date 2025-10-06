@@ -23,7 +23,7 @@ export class PerformanceMonitor {
     // Navigation timing
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigation) {
-      this.metrics.navigationStart = navigation.navigationStart;
+      this.metrics.navigationStart = navigation.startTime;
       this.metrics.loadComplete = navigation.loadEventEnd;
       this.metrics.domContentLoaded = navigation.domContentLoadedEventEnd;
     }
@@ -63,7 +63,7 @@ export class PerformanceMonitor {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: PerformanceEventTiming) => {
           if (entry.processingStart && entry.startTime) {
             this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
           }
@@ -78,7 +78,7 @@ export class PerformanceMonitor {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: LayoutShift) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
