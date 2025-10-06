@@ -93,7 +93,7 @@ describe('AnimatedTitles', () => {
     await waitFor(() => {
       const cursor = titleElement.querySelector('span[class*="animate-pulse"]');
       // Cursor might not be immediately visible due to timing, but component should support it
-      expect(titleElement).toBeInTheDocument();
+      expect(cursor).toBeInTheDocument();
     }, { timeout: 1000 });
   });
 

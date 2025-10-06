@@ -63,9 +63,13 @@ export class PerformanceMonitor {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEventTiming) => {
-          if (entry.processingStart && entry.startTime) {
-            this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
+        entries.forEach((entry) => {
+          // Check if this is a PerformanceEventTiming entry
+          if ('processingStart' in entry && 'startTime' in entry) {
+            const eventEntry = entry as PerformanceEventTiming;
+            if (eventEntry.processingStart && eventEntry.startTime) {
+              this.metrics.firstInputDelay = eventEntry.processingStart - eventEntry.startTime;
+            }
           }
         });
       });
@@ -78,9 +82,13 @@ export class PerformanceMonitor {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: LayoutShift) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+        entries.forEach((entry) => {
+          // Check if this is a LayoutShift entry
+          if ('value' in entry && 'hadRecentInput' in entry) {
+            const layoutShiftEntry = entry as any; // LayoutShift type may not be available in all environments
+            if (!layoutShiftEntry.hadRecentInput) {
+              clsValue += layoutShiftEntry.value;
+            }
           }
         });
         this.metrics.cumulativeLayoutShift = clsValue;
