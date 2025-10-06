@@ -4,6 +4,7 @@ import { Section } from './components/Section';
 import { Timeline } from './components/Timeline';
 import { TechIcon } from './components/TechIcon';
 import { Footer } from './components/Footer';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { profile, skills, experience, contactCTA } from './data';
 import { Suspense, lazy } from 'react';
 const ProjectsGrid = lazy(() => import('./components/ProjectsGrid').then(m => ({ default: m.ProjectsGrid })));
@@ -80,9 +81,11 @@ function App() {
         </Section>
 
         <Section id="projects" subtitle="Projects" title="Selected Work">
-          <Suspense fallback={<p className="text-sm text-neutral-500">Loading projects…</p>}>
-            <ProjectsGrid />
-          </Suspense>
+          <ErrorBoundary>
+            <Suspense fallback={<p className="text-sm text-neutral-500">Loading projects…</p>}>
+              <ProjectsGrid />
+            </Suspense>
+          </ErrorBoundary>
         </Section>
 
         <Section id="experience" subtitle="Experience" title="Professional Timeline">

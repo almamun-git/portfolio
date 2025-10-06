@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 const titles = [
   'Full-Stack Developer',
@@ -6,7 +6,7 @@ const titles = [
   'Frontend Developer (React / Next.js)',
   'Backend Developer (Django, Java / Spring Boot)',
   'Software Engineer',
-];
+] as const;
 
 export const AnimatedTitles = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,8 +14,18 @@ export const AnimatedTitles = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isWaiting, setIsWaiting] = useState(false);
 
-  useEffect(() => {
+  // Check for reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const updateText = useCallback(() => {
     const currentTitle = titles[currentIndex];
+    
+    if (prefersReducedMotion) {
+      // For users who prefer reduced motion, just show static text
+      setDisplayedText(currentTitle);
+      return;
+    }
+
     const typingSpeed = isDeleting ? 30 : 70; 
 
     if (isWaiting) return;
@@ -50,12 +60,24 @@ export const AnimatedTitles = () => {
     }, typingSpeed);
 
     return () => clearTimeout(timeout);
-  }, [displayedText, isDeleting, currentIndex, isWaiting]);
+  }, [currentIndex, displayedText, isDeleting, isWaiting, prefersReducedMotion]);
+
+  useEffect(() => {
+    updateText();
+  }, [updateText]);
 
   return (
-    <p className="text-lg md:text-xl text-neutral-600 dark:text-neutral-300 min-h-[2.5rem] md:min-h-[2.5rem] leading-relaxed">
-      {displayedText}
-      {!isWaiting && <span className="animate-pulse">|</span>}
+    <p 
+      className="text-lg md:text-xl text-neutral-600 dark:text-neutral-300 min-h-[2.5rem] md:min-h-[2.5rem] leading-relaxed"
+      aria-live={prefersReducedMotion ? 'off' : 'polite'}
+      aria-label={prefersReducedMotion ? titles[currentIndex] : `Currently showing: ${displayedText}`}
+    >
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-primary-300 font-medium">
+        {displayedText}
+      </span>
+      {!isWaiting && !prefersReducedMotion && (
+        <span className="animate-pulse text-primary-500 dark:text-primary-400">|</span>
+      )}
     </p>
   );
 };
