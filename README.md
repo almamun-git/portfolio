@@ -41,10 +41,17 @@ npm run dev
 ```
 Then open http://localhost:5173
 
-## 🧱 Build
+## � Testing
+Comprehensive test suite with 61 tests covering all major components:
+- **Vitest** + **@testing-library/react** for component testing
+- Tests for accessibility, user interactions, and edge cases
+- Mock implementations for browser APIs (localStorage, matchMedia)
+- Run tests: `npm run test`
+- Test coverage includes: Header, ProjectCard, Timeline, DarkModeToggle, ProjectsGrid, Section, ContactForm, TechIcon, AnimatedTitles
+
 ```bash
-npm run build
-npm run preview
+npm run test        # Run tests in watch mode
+npm run test -- --run  # Run tests once (CI mode)
 ```
 
 ## ✏️ Content Editing
