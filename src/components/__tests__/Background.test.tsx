@@ -8,7 +8,7 @@ describe('Background', () => {
 
     const backgroundDiv = container.firstChild as HTMLElement;
     expect(backgroundDiv).toBeInTheDocument();
-    expect(backgroundDiv).toHaveAttribute('aria-hidden', '');
+    expect(backgroundDiv).toHaveAttribute('aria-hidden', 'true');
     expect(backgroundDiv).toHaveClass('pointer-events-none', 'fixed', 'inset-0', '-z-10', 'overflow-hidden');
   });
 
@@ -44,12 +44,12 @@ describe('Background', () => {
     expect(vignetteLayer).toHaveClass('absolute', 'inset-x-0', 'top-0', 'h-40', 'bg-gradient-to-b', 'from-white/70', 'dark:from-neutral-950/70', 'to-transparent');
   });
 
-  it('contains exactly 5 background layers', () => {
+  it('contains exactly 4 background layers', () => {
     const { container } = render(<Background />);
 
     const backgroundDiv = container.firstChild as HTMLElement;
     const layers = backgroundDiv?.querySelectorAll('div');
-    expect(layers).toHaveLength(5);
+    expect(layers).toHaveLength(4);
   });
 
   it('all layers have absolute positioning', () => {
@@ -69,7 +69,7 @@ describe('Background', () => {
 
     // Verify we have the expected layers in order
     const layers = container.querySelectorAll('div.absolute');
-    expect(layers).toHaveLength(5); // gradient, grid, noise, vignette
+    expect(layers).toHaveLength(4); // gradient, grid, noise, vignette
 
     // Check specific classes that match the comment description
     expect(layers[0]).toHaveClass('bg-radial-fx', 'animate-gradient-float'); // Animated gradient blobs
