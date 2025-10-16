@@ -1,10 +1,9 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 import { ErrorBoundary } from '../ErrorBoundary';
 
 // Mock console methods
 const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-const consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
 // Component that throws an error
 function ErrorThrowingComponent() {

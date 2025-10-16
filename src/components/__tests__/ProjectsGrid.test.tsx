@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { vi, describe, it, expect } from 'vitest';
 import { ProjectsGrid } from '../ProjectsGrid';
-import { projects } from '../../data';
+import { projects, type Project } from '../../data';
 
 // Mock the ProjectCard component
 vi.mock('../ProjectCard', () => ({
-  ProjectCard: ({ project }: { project: any }) => (
+  ProjectCard: ({ project }: { project: Project }) => (
     <div data-testid={`project-card-${project.title.replace(/\s+/g, '-').toLowerCase()}`}>
       <h3>{project.title}</h3>
       <p>{project.description}</p>
@@ -44,7 +44,7 @@ describe('ProjectsGrid', () => {
     // We can verify this by checking that all expected projects are rendered
     render(<ProjectsGrid />);
 
-    projects.forEach(project => {
+      projects.forEach((project) => {
       expect(screen.getByText(project.title)).toBeInTheDocument();
     });
   });
