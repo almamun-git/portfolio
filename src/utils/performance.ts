@@ -82,10 +82,12 @@ export class PerformanceMonitor {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
+        type LayoutShiftEntry = PerformanceEntry & { value: number; hadRecentInput: boolean };
         entries.forEach((entry) => {
-          // Check if this is a LayoutShift entry
-          if ('value' in entry && 'hadRecentInput' in entry) {
-            const layoutShiftEntry = entry as any; // LayoutShift type may not be available in all environments
+          // Narrow to LayoutShiftEntry by checking properties
+          const maybe = entry as Partial<LayoutShiftEntry>;
+          if (typeof maybe.value === 'number' && typeof maybe.hadRecentInput === 'boolean') {
+            const layoutShiftEntry = maybe as LayoutShiftEntry;
             if (!layoutShiftEntry.hadRecentInput) {
               clsValue += layoutShiftEntry.value;
             }

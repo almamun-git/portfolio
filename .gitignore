@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .env
+
+# Vitest coverage output
+coverage/

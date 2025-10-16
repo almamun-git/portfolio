@@ -43,11 +43,15 @@ Then open http://localhost:5173
 
 ## � Testing
 Comprehensive test suite with 61 tests covering all major components:
-- **Vitest** + **@testing-library/react** for component testing
-- Tests for accessibility, user interactions, and edge cases
-- Mock implementations for browser APIs (localStorage, matchMedia)
-- Run tests: `npm run test`
-- Test coverage includes: Header, ProjectCard, Timeline, DarkModeToggle, ProjectsGrid, Section, ContactForm, TechIcon, AnimatedTitles
+## � Testing
+Comprehensive test suite with 87 tests covering all major components:
+ - **Vitest** + **@testing-library/react** for component testing
+ - Tests for accessibility, user interactions, and edge cases
+ - Mock implementations for browser APIs (localStorage, matchMedia)
+ - Run tests: `npm run test`
+ - Run once (CI): `npm run test -- --run`
+ - Coverage: `npm run test:coverage`
+ - Test coverage includes: Header, ProjectCard, Timeline, DarkModeToggle, ProjectsGrid, Section, ContactForm, TechIcon, AnimatedTitles, Background, ErrorBoundary, and Performance utilities
 
 ```bash
 npm run test        # Run tests in watch mode
