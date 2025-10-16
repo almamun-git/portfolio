@@ -14,7 +14,8 @@ class MockPerformanceObserver {
   takeRecords = vi.fn(() => []);
 }
 
-global.PerformanceObserver = MockPerformanceObserver as any;
+// Cast to the PerformanceObserver constructor type
+global.PerformanceObserver = MockPerformanceObserver as unknown as typeof PerformanceObserver;
 
 // Mock performance object globally
 Object.defineProperty(window, 'performance', {

@@ -1,4 +1,4 @@
-/// <reference types="vitest/globals" />
+import '@testing-library/jest-dom/vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { ContactForm } from '../ContactForm';
 
