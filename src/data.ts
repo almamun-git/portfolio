@@ -77,7 +77,7 @@ export const experience: ExperienceItem[] = [
     details: [ 'Frontend Developer on WIL project', 'Applied modern React patterns and state management' ]
   },
   {
-    timeframe: '2025 – Present',
+    timeframe: 'August – October',
     role: 'Software Engineer Intern',
     org: 'Vibes Meet LLC',
     summary: 'Mobile + backend engineering for social video platform.',
