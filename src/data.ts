@@ -77,11 +77,11 @@ export const experience: ExperienceItem[] = [
     details: [ 'Frontend Developer on WIL project', 'Applied modern React patterns and state management' ]
   },
   {
-    timeframe: 'August – October',
+    timeframe: 'August – October 2025',
     role: 'Software Engineer Intern',
     org: 'Vibes Meet LLC',
     summary: 'Mobile + backend engineering for social video platform.',
-    details: [ 'Implemented adaptive video player with caption overlays', 'Integrated cloud storage and delivery workflows', 'Integrated Apple Pay and Google Pay with Stripe' ]
+    details: [ 'Implemented adaptive video player with caption overlays', 'Integrated cloud storage and delivery workflows', 'Integrated Apple Pay, Google Pay, Pay with card, and pay with the link with Stripe' ]
   }
 ];
 
