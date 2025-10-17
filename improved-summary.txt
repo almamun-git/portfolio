@@ -1,5 +1,13 @@
 Dynamic full-stack engineer with a passion for crafting exceptional user experiences and scalable backend systems. Armed with a Post-Graduate Diploma in Full-Stack Software Development from Lambton College and a B.Sc. in Computer Science & Engineering from East West University, I specialize in delivering end-to-end digital solutions across web and mobile platforms.
 
+**Technical Expertise:**
+- **Frontend:** React (19), Next.js, TypeScript, JavaScript (ES6+), Tailwind CSS, Redux, React Native, Expo
+- **Backend:** Node.js, Django/DRF, Spring Boot, REST APIs, Celery, Redis
+- **Databases:** MySQL, MongoDB, PostgreSQL, PL/SQL
+- **Cloud & DevOps:** AWS (S3, CloudFront), Docker, Git/GitHub, Stripe, Apple Pay/Google Pay
+- **AI/ML:** TensorFlow, PyTorch, Scikit-learn, Whisper (speech-to-text)
+- **Testing & Tools:** Vitest, Testing Library, ESLint, Vite, PostCSS, Jira, Agile methodologies
+
 My expertise spans modern JavaScript ecosystems, cloud-native architectures, and performance-optimized systems. I've successfully architected and deployed complex media processing pipelines, including an adaptive video player with automated captioning using React Native, Django, Celery, and cloud storage solutions. Through strategic query optimization and intelligent caching implementations, I've driven significant backend performance improvements.
 
 I champion clean, maintainable code through type-safe development practices and robust CI/CD pipelines. When I'm not coding, you'll find me exploring emerging technologies, contributing to open-source projects, or mentoring aspiring developers in the ever-evolving tech landscape.
