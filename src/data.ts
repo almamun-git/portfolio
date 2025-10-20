@@ -1,7 +1,7 @@
 // Central structured data for portfolio sections
 export const profile = {
   name: 'Abdullah Al Mamun Apu',
-  role: 'Full-Stack Developer | React & Node.js Specialist',
+  role: 'Full-Stack Engineer | React, Node.js & Payment Systems Specialist',
   location: 'Toronto, ON, Canada',
   email: 'almamun.codes@gmail.com',
   links: {
