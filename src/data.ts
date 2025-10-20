@@ -9,7 +9,13 @@ export const profile = {
     linkedin: 'https://linkedin.com/in/almamun-in',
     portfolio: 'https://mamunapu.tech'
   },
-  summary: `Helping startups and businesses build fast, scalable web applications with React, Node.js, and cloud technologies. 2+ years of experience delivering performant solutions for e-commerce, SaaS, and real-time applications. Passionate about solving complex problems and continuous learning.`
+  summary: `Full-stack engineer with a strong foundation in frontend development, quality assurance, and technical support. I hold a Post-Graduate Certificate in Full-Stack Software Development from Lambton College, Toronto, and a B.Sc. in Computer Science & Engineering from East West University, Dhaka.
+
+My recent work focuses on integrating secure and seamless payment systems using Stripe, Apple Pay, Google Pay, and Flutterwave, delivering smooth multi-currency transaction experiences for web and mobile users. On the frontend, I build modern, responsive interfaces with React, Next.js, and TypeScript, ensuring performance and accessibility.
+
+Before moving into full-stack development, I gained hands-on experience as a QA Engineer, where I tested and validated complex user flows to maintain high product reliability, and as a Technical Support Specialist, where I developed strong diagnostic and communication skills that help me bridge technical and user perspectives.
+
+I'm passionate about crafting clean, scalable, and maintainable systems that provide real value to both users and teams.`
 };
 
 export interface SkillCategory { title: string; items: string[] }
