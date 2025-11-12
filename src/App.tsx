@@ -52,10 +52,10 @@ function App() {
             <div className="card p-5 space-y-4 self-start">
               <h3 className="text-sm font-semibold tracking-wide uppercase text-neutral-700 dark:text-neutral-300">Currently Focused</h3>
               <ul className="space-y-2 text-xs text-neutral-600 dark:text-neutral-400">
-                <li>Scalable media services</li>
-                <li>Advanced React patterns</li>
-                <li>Observability & performance</li>
-                <li>Developer experience automation</li>
+                <li>Building scalable media and payment services</li>
+                <li>Exploring advanced React and Next.js patterns</li>
+                <li>Enhancing observability, performance, and reliability</li>
+                <li>Automating developer workflows for faster, safer delivery</li>
               </ul>
               <a href="/resume.pdf" className="inline-flex items-center justify-center w-full rounded-md bg-primary-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-primary-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50">Resume (PDF)</a>
             </div>

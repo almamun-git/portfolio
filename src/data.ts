@@ -1,7 +1,7 @@
 // Central structured data for portfolio sections
 export const profile = {
   name: 'Abdullah Al Mamun Apu',
-  role: 'Full-Stack Developer | React & Node.js Specialist',
+  role: 'Full-Stack Engineer | Frontend, QA & Payment Integration Specialist',
   location: 'Toronto, ON, Canada',
   email: 'almamun.codes@gmail.com',
   links: {
@@ -9,7 +9,13 @@ export const profile = {
     linkedin: 'https://linkedin.com/in/almamun-in',
     portfolio: 'https://mamunapu.tech'
   },
-  summary: `Helping startups and businesses build fast, scalable web applications with React, Node.js, and cloud technologies. 2+ years of experience delivering performant solutions for e-commerce, SaaS, and real-time applications. Passionate about solving complex problems and continuous learning.`
+  summary: `Full-stack engineer with a strong foundation in frontend development, quality assurance, and technical support. I hold a Post-Graduate Certificate in Full-Stack Software Development from Lambton College, Toronto, and a B.Sc. in Computer Science & Engineering from East West University, Dhaka.
+
+My recent work focuses on integrating secure and seamless payment systems using Stripe, Apple Pay, Google Pay, and Flutterwave, delivering smooth multi-currency transaction experiences for web and mobile users. On the frontend, I build modern, responsive interfaces with React, Next.js, and TypeScript, ensuring performance and accessibility.
+
+Before moving into full-stack development, I gained hands-on experience as a QA Engineer, where I tested and validated complex user flows to maintain high product reliability, and as a Technical Support Specialist, where I developed strong diagnostic and communication skills that help me bridge technical and user perspectives.
+
+I'm passionate about crafting clean, scalable, and maintainable systems that provide real value to both users and teams.`
 };
 
 export interface SkillCategory { title: string; items: string[] }
@@ -23,19 +29,22 @@ export const skills: SkillCategory[] = [
 
 export interface Project { title: string; description: string; tech: string[]; links: { github?: string; demo?: string }; highlight?: string }
 export const projects: Project[] = [
-  {
-    title: 'E-Commerce ShopContext',
-    description: 'React + Context API shop with dynamic cart management, product filtering, and state persistence.',
-    tech: ['React', 'Context API', 'TypeScript'],
-    links: { github: '#', demo: '#' },
-  highlight: 'Dynamic cart & filtering'
+   {
+    title: 'Ops-Assist AI',
+    description: 'Intelligent incident response platform: FastAPI backend + Next.js dashboard for real-time event ingestion, automatic incident detection, and AI-assisted classification.',
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'PostgreSQL', 'Docker'],
+    links: {
+      github: 'https://github.com/almamun-git/Ops-Assist-AI',
+      demo: 'https://ops-assist-ai-frontend.vercel.app'
+    },
+    highlight: 'AI-powered incident triage'
   },
   {
     title: 'Trello-style Task Board',
     description: 'Drag-and-drop Kanban board with CRUD tasks, column re-ordering, and persistence layer.',
     tech: ['React', 'DnD'],
-    links: { github: '#', demo: '#' },
-  highlight: 'Drag-and-drop productivity'
+    links: { github: 'https://github.com/almamun-git/to-do', demo: 'https://taskmanager-mamun.netlify.app/' },
+    highlight: 'category wise productivity'
   },
   {
     title: 'Captions Backend',
@@ -51,6 +60,7 @@ export const projects: Project[] = [
     links: { github: '#'},
   highlight: 'Multi-quality & captions'
   }
+  ,
 ];
 
 export interface ExperienceItem { timeframe: string; role: string; org: string; summary: string; details?: string[] }
