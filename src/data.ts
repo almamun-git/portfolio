@@ -32,7 +32,21 @@ export const projects: Project[] = [
    {
     title: 'Ops-Assist AI',
     description: 'Intelligent incident response platform: FastAPI backend + Next.js dashboard for real-time event ingestion, automatic incident detection, and AI-assisted classification.',
-    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'PostgreSQL', 'Docker'],
+    tech: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'FastAPI',
+      'SQLAlchemy',
+      'Uvicorn',
+      'PostgreSQL',
+      'Supabase',
+      'OpenAI',
+      'Docker',
+      'Railway',
+      'Vercel'
+    ],
     links: {
       github: 'https://github.com/almamun-git/Ops-Assist-AI',
       demo: 'https://ops-assist-ai-frontend.vercel.app'
