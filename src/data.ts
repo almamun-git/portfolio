@@ -29,19 +29,22 @@ export const skills: SkillCategory[] = [
 
 export interface Project { title: string; description: string; tech: string[]; links: { github?: string; demo?: string }; highlight?: string }
 export const projects: Project[] = [
-  {
-    title: 'E-Commerce ShopContext',
-    description: 'React + Context API shop with dynamic cart management, product filtering, and state persistence.',
-    tech: ['React', 'Context API', 'TypeScript'],
-    links: { github: '#', demo: '#' },
-  highlight: 'Dynamic cart & filtering'
+   {
+    title: 'Ops-Assist AI',
+    description: 'Intelligent incident response platform: FastAPI backend + Next.js dashboard for real-time event ingestion, automatic incident detection, and AI-assisted classification.',
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'PostgreSQL', 'Docker'],
+    links: {
+      github: 'https://github.com/almamun-git/Ops-Assist-AI',
+      demo: 'https://ops-assist-ai-frontend.vercel.app'
+    },
+    highlight: 'AI-powered incident triage'
   },
   {
     title: 'Trello-style Task Board',
     description: 'Drag-and-drop Kanban board with CRUD tasks, column re-ordering, and persistence layer.',
     tech: ['React', 'DnD'],
-    links: { github: '#', demo: '#' },
-  highlight: 'Drag-and-drop productivity'
+    links: { github: 'https://github.com/almamun-git/to-do', demo: 'https://taskmanager-mamun.netlify.app/' },
+    highlight: 'category wise productivity'
   },
   {
     title: 'Captions Backend',
@@ -57,6 +60,7 @@ export const projects: Project[] = [
     links: { github: '#'},
   highlight: 'Multi-quality & captions'
   }
+  ,
 ];
 
 export interface ExperienceItem { timeframe: string; role: string; org: string; summary: string; details?: string[] }
