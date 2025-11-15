@@ -98,7 +98,24 @@ export const projects: Project[] = [
       github: 'https://github.com/almamun-git/to-do'
     },
     highlight: 'Context-driven task state with session-backed persistence'
-  }
+  },
+  {
+  title: 'File Locker – Secure File Hiding Desktop App',
+  description:
+    'Desktop application to securely hide and manage files with OTP-based email verification for sign-up and login. Supports hiding/unhiding files, backed by a MySQL database and a user-friendly Java Swing GUI.',
+  tech: [
+    'Java',
+    'Java Swing',
+    'MySQL',
+    'JDBC',
+    'OTP Email Verification'
+  ],
+  links: {
+    github: 'https://github.com/almamun-git/FileLocker'
+    // demo: '' // add a demo link here if you have one
+  },
+  highlight: 'OTP-secured file hiding and management'
+}
 ];
 
 export interface ExperienceItem { timeframe: string; role: string; org: string; summary: string; details?: string[] }
