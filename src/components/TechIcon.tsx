@@ -25,6 +25,11 @@ import {
   SiCloudflare,
   SiH2database,
   SiFastapi,
+  SiSupabase,
+  SiOpenai,
+  SiVercel,
+  SiRailway,
+  SiPython,
 } from '@icons-pack/react-simple-icons';
 
 // Explicit string-keyed map of icon components. This avoids using dynamic variable
@@ -55,6 +60,11 @@ const ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   SiCloudflare: SiCloudflare,
   SiH2database: SiH2database,
   SiFastapi: SiFastapi,
+  SiSupabase: SiSupabase,
+  SiOpenai: SiOpenai,
+  SiVercel: SiVercel,
+  SiRailway: SiRailway,
+  SiPython: SiPython,
 };
 
 // Map human-readable names to simple-icons export keys
@@ -78,6 +88,13 @@ const NAME_MAP: Record<string, string> = {
   'AWS (S3, CloudFront)': 'SiCloudflare',
   'Docker': 'SiDocker',
   'FastAPI': 'SiFastapi',
+  'Supabase': 'SiSupabase',
+  'OpenAI': 'SiOpenai',
+  'Vercel': 'SiVercel',
+  'Railway': 'SiRailway',
+  'Python': 'SiPython',
+  'SQLAlchemy': 'SiPython',
+  'Uvicorn': 'SiPython',
   'Agile': 'SiScrumalliance',
   'OOP': 'SiBlueprint',
   'Design Patterns': 'SiBookstack',
