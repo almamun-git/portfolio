@@ -29,8 +29,34 @@ export const skills: SkillCategory[] = [
 
 export interface Project { title: string; description: string; tech: string[]; links: { github?: string; demo?: string }; highlight?: string }
 export const projects: Project[] = [
-   {
-    title: 'Ops-Assist AI',
+  {
+    title: 'Automatic Video Generating AI Engine',
+    description: 'Automated video content pipeline: FastAPI backend + React/Vite dashboard for end-to-end short-form video generation—from AI-powered ideation and scripting to asset sourcing, programmatic editing, and rendering.',
+    tech: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'FastAPI',
+      'Uvicorn',
+      'Python',
+      'Google Gemini API',
+      'Pexels API',
+      'ElevenLabs API',
+      'Shotstack API',
+      'Docker',
+      'Nginx',
+      'Render'
+    ],
+    links: {
+      github: 'https://github.com/almamun-git/automatic-video-generating-ai-engine',
+      demo: 'https://autovidai-web.onrender.com'
+    },
+    highlight: 'AI-orchestrated 5-stage video production'
+  },
+  {
+    title: 'Intelligent Operations Workflow Assistant'
+,
     description: 'Intelligent incident response platform: FastAPI backend + Next.js dashboard for real-time event ingestion, automatic incident detection, and AI-assisted classification.',
     tech: [
       'Next.js',
@@ -54,27 +80,25 @@ export const projects: Project[] = [
     highlight: 'AI-powered incident triage'
   },
   {
-    title: 'Trello-style Task Board',
-    description: 'Drag-and-drop Kanban board with CRUD tasks, column re-ordering, and persistence layer.',
-    tech: ['React', 'DnD'],
-    links: { github: 'https://github.com/almamun-git/to-do', demo: 'https://taskmanager-mamun.netlify.app/' },
-    highlight: 'category wise productivity'
-  },
-  {
-    title: 'Captions Backend',
-    description: 'Django + Celery pipeline for Whisper-based automatic media transcription & caption generation.',
-    tech: ['Django', 'Celery', 'Redis', 'Whisper'],
-    links: { github: '#'},
-  highlight: 'Async caption generation'
-  },
-  {
-    title: 'Adaptive Video Player (Mobile)',
-    description: 'React Native + Expo adaptive video player with multi-quality selection and caption support.',
-    tech: ['React Native', 'Expo'],
-    links: { github: '#'},
-  highlight: 'Multi-quality & captions'
+    title: 'To-Do List App',
+    description: 'A React and TypeScript to-do list application using Context API for global state management and Session Storage for client-side persistence—delivering a responsive, DaisyUI-styled interface for creating, updating, and tracking tasks across a browsing session.',
+    tech: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Context API',
+      'Tailwind CSS',
+      'DaisyUI',
+      'Session Storage',
+      'HTML',
+      'CSS',
+      'JavaScript'
+    ],
+    links: {
+      github: 'https://github.com/almamun-git/to-do'
+    },
+    highlight: 'Context-driven task state with session-backed persistence'
   }
-  ,
 ];
 
 export interface ExperienceItem { timeframe: string; role: string; org: string; summary: string; details?: string[] }
