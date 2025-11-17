@@ -21,6 +21,11 @@ function App() {
           <div className="flex flex-col gap-6 md:flex-row md:items-start">
             <div className="flex-1 space-y-4">
               <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-balance headline-gradient">{profile.name}</h1>
+              <ul className="flex flex-wrap gap-2 text-xs md:text-sm font-medium text-primary-600 dark:text-primary-300">
+                <li className="tag">Full-Stack Engineer – React & Django</li>
+                <li className="tag">Frontend Specialist – Next.js & TypeScript</li>
+                <li className="tag">Backend Engineer – FastAPI & PostgreSQL</li>
+              </ul>
               <AnimatedTitles />
               <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed text-balance">{profile.summary}</p>
               <ul className="flex flex-wrap gap-3 text-sm">
