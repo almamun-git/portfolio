@@ -6,11 +6,11 @@ export function ProjectCard({ project }: { project: Project }) {
     <div className="group relative card p-5 flex flex-col gap-4 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
       <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-br from-primary-500/5 via-primary-500/0 to-primary-500/10" />
       <div className="flex flex-col gap-4 flex-1">
-      <div className="flex items-start justify-between gap-4 relative z-10">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-4 relative z-10">
         <h3 className="text-lg font-semibold leading-tight flex-1 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">{project.title}</h3>
         {project.highlight && (
           <span
-            className="tag max-w-[140px] sm:max-w-[180px] md:max-w-none truncate"
+            className="tag block w-full sm:w-auto whitespace-normal break-words leading-snug mt-1 sm:mt-0"
             title={project.highlight}
             aria-label={project.highlight}
           >
