@@ -58,7 +58,7 @@ function App() {
             <div className="w-full md:w-72 lg:w-80">
               <div className="card p-6 space-y-6 h-full">
                 <div>
-                  <p className="text-xs uppercase tracking-wide text-neutral-500 dark:text-neutral-400">2-year snapshot</p>
+                  <p className="text-xs uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Quick Snapshot</p>
                   <p className="text-xl font-semibold mt-1 text-neutral-900 dark:text-white">Hands-on full-stack delivery.</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
