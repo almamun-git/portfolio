@@ -20,7 +20,7 @@ function App() {
         <Section id="about">
           <div className="flex flex-col gap-8 md:flex-row md:items-start lg:items-center">
             <div className="flex-1 space-y-6">
-              <div className="pt-2 md:pt-4">
+              <div className="pt-4 md:pt-8">
                 <p className="text-xs uppercase tracking-[0.4em] text-primary-500 dark:text-primary-300 mb-2">Building products with intent</p>
                 <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-balance headline-gradient">{profile.name}</h1>
               </div>
