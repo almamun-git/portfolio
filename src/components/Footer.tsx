@@ -27,7 +27,7 @@ const scrollToTop = () => {
 
 export function Footer() {
   return (
-    <footer className="relative mt-32 border-t border-neutral-200/60 dark:border-neutral-800 pt-16 pb-10 overflow-hidden">
+    <footer className="relative sm:mt-24 lg:mt-32 border-t border-neutral-200/60 dark:border-neutral-800 pt-16 pb-10 overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-primary-500/5 to-primary-600/10" />
       <div className="container-section relative z-10">
         <div className="grid gap-10 md:grid-cols-3">

@@ -8,7 +8,15 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="flex flex-col gap-4 flex-1">
       <div className="flex items-start justify-between gap-4 relative z-10">
         <h3 className="text-lg font-semibold leading-tight flex-1 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">{project.title}</h3>
-        {project.highlight && <span className="tag whitespace-nowrap">{project.highlight}</span>}
+        {project.highlight && (
+          <span
+            className="tag max-w-[140px] sm:max-w-[180px] md:max-w-none truncate"
+            title={project.highlight}
+            aria-label={project.highlight}
+          >
+            {project.highlight}
+          </span>
+        )}
       </div>
       <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed relative z-10">{project.description}</p>
       <div className="flex flex-wrap gap-3 text-xs relative z-10">
