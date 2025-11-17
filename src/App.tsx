@@ -101,17 +101,26 @@ function App() {
 
         <Section id="skills" subtitle="Skills" title="Core Technologies & Competencies">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {skills.map(cat => (
-              <div key={cat.title} className="card p-5 flex flex-col gap-4">
-                <h3 className="font-semibold text-sm tracking-wide uppercase text-neutral-700 dark:text-neutral-300">{cat.title}</h3>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {skills.map((cat, index) => (
+              <div 
+                key={cat.title} 
+                className="group relative card p-6 flex flex-col gap-5 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-primary-500/10 via-transparent to-primary-600/5" />
+                <div className="relative z-10 flex items-center gap-2">
+                  <div className="h-1 w-8 rounded-full bg-primary-500 group-hover:w-12 transition-all duration-300" />
+                  <h3 className="font-semibold text-sm tracking-wide uppercase text-neutral-700 dark:text-neutral-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">{cat.title}</h3>
+                </div>
+                <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
                   {cat.items.map(item => (
-                    <li key={item} className="flex items-center gap-2 text-xs font-medium text-neutral-700 dark:text-neutral-300">
+                    <li key={item} className="flex items-center gap-2 text-xs font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                       <TechIcon name={item} size={18} className="shrink-0" />
                       <span className="leading-tight">{item.replace(' basics (TensorFlow, PyTorch, Scikit-learn)','')}</span>
                     </li>
                   ))}
                 </ul>
+                <span className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-transparent group-hover:ring-primary-500/30 transition-all duration-300" />
               </div>
             ))}
           </div>
