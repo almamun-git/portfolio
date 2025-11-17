@@ -74,8 +74,8 @@ export const projects: Project[] = [
     highlight: 'AI-powered incident triage'
   },
   {
-    title: 'To-Do List App',
-    description: 'A React and TypeScript to-do list application using Context API for global state management and Session Storage for client-side persistence—delivering a responsive, DaisyUI-styled interface for creating, updating, and tracking tasks across a browsing session.',
+    title: 'Task Manager',
+    description: 'A React and TypeScript task management application using Context API for global state management and Session Storage for client-side persistence—delivering a responsive, DaisyUI-styled interface for creating, updating, and tracking tasks across a browsing session.',
     tech: [
       'React',
       'TypeScript',
@@ -89,7 +89,8 @@ export const projects: Project[] = [
       'JavaScript'
     ],
     links: {
-      github: 'https://github.com/almamun-git/to-do'
+      github: 'https://github.com/almamun-git/to-do',
+      demo: 'https://taskmanager-mamun.netlify.app/'
     },
     highlight: 'Context-driven task state with session-backed persistence'
   },
