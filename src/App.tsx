@@ -35,9 +35,6 @@ function App() {
               </p>
               <ul className="flex flex-wrap gap-3 text-sm">
                 <li className="tag">Toronto, Canada</li>
-                <li className="tag">React / TypeScript</li>
-                <li className="tag">Django</li>
-                <li className="tag">Cloud & Scalability</li>
               </ul>
               <div className="flex flex-wrap gap-4 pt-3 text-sm">
                 <a className="inline-flex items-center gap-2 rounded-full bg-primary-600 text-white px-5 py-2 text-sm font-medium shadow hover:bg-primary-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/60" href="mailto:almamun.codes@gmail.com">
@@ -89,7 +86,7 @@ function App() {
 
         <Section id="summary" subtitle="Summary" title="Professional Snapshot & Value">
           <div className="space-y-3">
-            <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300 text-balance">Full-stack engineer blending strong frontend product focus with pragmatic backend design. Post-Graduate Full-Stack Software Development (Lambton College) and B.Sc. in Computer Science & Engineering (East West University). Experienced in delivering production-ready features across web & mobile, async media processing pipelines, and cloud deployment strategies with measurable impact.</p>
+            <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300 text-balance">Full-stack engineer blending strong frontend product focus with pragmatic backend design. Post-Graduate Full-Stack Software Development (Lambton College, Toronto) and B.Sc. in Computer Science & Engineering (East West University). Experienced in delivering production-ready features across web & mobile, async media processing pipelines, and cloud deployment strategies with measurable impact.</p>
             <ul className="space-y-2 text-sm">
               <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Delivered payment integrations (Stripe, Apple Pay, Google Pay) with 99.9% transaction success rate and AI-powered systems processing thousands of events per minute.</span></li>
               <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Built adaptive video player & caption pipeline (React Native + Django + Celery) improving playback reliability by 35% and reducing media load times by 40%.</span></li>
