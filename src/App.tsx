@@ -58,16 +58,16 @@ function App() {
             <div className="w-full md:w-72 lg:w-80">
               <div className="card p-6 space-y-6 h-full">
                 <div>
-                  <p className="text-xs uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Quick Snapshot</p>
-                  <p className="text-xl font-semibold mt-1 text-neutral-900 dark:text-white">Shipping ambitious products end-to-end.</p>
+                  <p className="text-xs uppercase tracking-wide text-neutral-500 dark:text-neutral-400">2-year snapshot</p>
+                  <p className="text-xl font-semibold mt-1 text-neutral-900 dark:text-white">Hands-on full-stack delivery.</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="rounded-lg bg-primary-50/70 dark:bg-primary-500/10 p-4">
-                    <p className="text-2xl font-bold text-primary-600 dark:text-primary-300">5+</p>
+                    <p className="text-2xl font-bold text-primary-600 dark:text-primary-300">2+</p>
                     <p className="text-xs text-neutral-600 dark:text-neutral-400">Years experience</p>
                   </div>
                   <div className="rounded-lg bg-neutral-100 dark:bg-neutral-800 p-4">
-                    <p className="text-2xl font-bold text-neutral-900 dark:text-white">20+</p>
+                    <p className="text-2xl font-bold text-neutral-900 dark:text-white">8+</p>
                     <p className="text-xs text-neutral-600 dark:text-neutral-400">Projects shipped</p>
                   </div>
                   <div className="rounded-lg bg-neutral-100 dark:bg-neutral-800 p-4">
@@ -91,9 +91,9 @@ function App() {
           <div className="space-y-3">
             <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300 text-balance">Full-stack engineer blending strong frontend product focus with pragmatic backend design. Post-Graduate Full-Stack Software Development (Lambton College) and B.Sc. in Computer Science & Engineering (East West University). Experienced in delivering production-ready features across web & mobile, async media processing pipelines, and cloud deployment strategies with measurable impact.</p>
             <ul className="space-y-2 text-sm">
+              <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Delivered payment integrations (Stripe, Apple Pay, Google Pay) with 99.9% transaction success rate and AI-powered systems processing thousands of events per minute.</span></li>
               <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Built adaptive video player & caption pipeline (React Native + Django + Celery) improving playback reliability by 35% and reducing media load times by 40%.</span></li>
               <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Reduced API latency by 25% through query optimization and caching strategies, and expanded automated regression coverage by 40%.</span></li>
-              <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Delivered payment integrations (Stripe, Apple Pay, Google Pay) with 99.9% transaction success rate and AI-powered systems processing thousands of events per minute.</span></li>
               <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Advocate for clean architecture, type safety, automated testing, and repeatable delivery workflows (CI/CD).</span></li>
             </ul>
           </div>
