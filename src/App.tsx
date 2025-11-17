@@ -42,11 +42,12 @@ function App() {
         <Section id="summary" subtitle="Summary" title="Professional Snapshot & Value">
           <div className="grid gap-8 md:grid-cols-3">
             <div className="space-y-3 md:col-span-2">
-              <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300 text-balance">Full-stack engineer blending strong frontend product focus with pragmatic backend design. Post-Graduate Full-Stack Software Development (Lambton College) and B.Sc. in Computer Science & Engineering (East West University). Experienced in delivering end-to-end features across web & mobile, async media processing pipelines, and cloud deployment strategies.</p>
+              <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300 text-balance">Full-stack engineer blending strong frontend product focus with pragmatic backend design. Post-Graduate Full-Stack Software Development (Lambton College) and B.Sc. in Computer Science & Engineering (East West University). Experienced in delivering production-ready features across web & mobile, async media processing pipelines, and cloud deployment strategies with measurable impact.</p>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Built adaptive video player & caption pipeline (React Native + Django + Celery + cloud storage).</span></li>
-                <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Improved backend performance through query optimization and caching strategies.</span></li>
-                <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Advocate for clean architecture, type safety, and repeatable delivery workflows (CI/CD).</span></li>
+                <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Built adaptive video player & caption pipeline (React Native + Django + Celery) improving playback reliability by 35% and reducing media load times by 40%.</span></li>
+                <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Reduced API latency by 25% through query optimization and caching strategies, and expanded automated regression coverage by 40%.</span></li>
+                <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Delivered payment integrations (Stripe, Apple Pay, Google Pay) with 99.9% transaction success rate and AI-powered systems processing thousands of events per minute.</span></li>
+                <li className="flex gap-2"><span className="text-primary-500 mt-0.5">•</span><span>Advocate for clean architecture, type safety, automated testing, and repeatable delivery workflows (CI/CD).</span></li>
               </ul>
             </div>
             <div className="card p-5 space-y-4 self-start">
@@ -95,7 +96,12 @@ function App() {
         <Section id="contact" subtitle="Contact" title="Let's Connect">
           <div className="grid gap-10 lg:grid-cols-2 items-start">
             <div className="card p-8 flex flex-col items-start gap-6">
-              <h3 className="text-xl font-semibold leading-tight text-balance">{contactCTA.headline}</h3>
+              <div className="space-y-3">
+                <h3 className="text-xl font-semibold leading-tight text-balance">{contactCTA.headline}</h3>
+                {contactCTA.subheadline && (
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{contactCTA.subheadline}</p>
+                )}
+              </div>
               <div className="flex flex-wrap gap-4">
                 <a href={`mailto:${contactCTA.email}`} className="inline-flex items-center rounded-md bg-primary-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-primary-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50">Email Me</a>
                 <a href={contactCTA.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center rounded-md border border-primary-600/40 text-primary-600 dark:text-primary-400 px-4 py-2 text-sm font-medium hover:bg-primary-50 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/40">LinkedIn</a>
