@@ -49,7 +49,7 @@ export const projects: Project[] = [
     highlight: 'AI-orchestrated 5-stage video production'
   },
   {
-    title: 'Intelligent Operations Workflow Assistant'
+    title: 'Intelligent Incident Workflow Assistant'
 ,
     description: 'Intelligent incident response platform: FastAPI backend + Next.js dashboard for real-time event ingestion, automatic incident detection, and AI-assisted classification.',
     tech: [
@@ -123,10 +123,14 @@ export const experience: ExperienceItem[] = [
   },
   {
     timeframe: '2021 – 2023',
-    role: 'Software Developer',
+    role: 'Full-Time Frontend & QA Engineer',
     org: 'Goonfol Technologies',
-    summary: 'Developed web portals and REST APIs; optimized backend performance.',
-    details: [ 'Built scalable endpoints and data models', 'Improved API performance via caching & query tuning' ]
+    summary: 'Owned frontend delivery and regression QA for customer portals; reduced API latency by 25% via caching and query tuning while lifting release confidence with automated test suites.',
+    details: [
+      'Built scalable endpoints and data models',
+      'Improved API performance via caching & query tuning',
+      'Expanded automated regression coverage by 40% with Cypress and Postman suites'
+    ]
   },
   {
     timeframe: '2023 – 2025',
