@@ -9,7 +9,7 @@ export const profile = {
     linkedin: 'https://linkedin.com/in/almamun-in',
     portfolio: 'https://mamunapu.tech'
   },
-  summary: `Full‑stack engineer passionate about building products that matter. With experience across frontend, backend, QA, and technical support, I specialize in creating secure, scalable web applications using React, Next.js, TypeScript, Node.js, Python, Django, and FastAPI. I've delivered production-ready features including AI-powered video generation engines, intelligent incident tracking systems, and modern payment integrations—always prioritizing reliability, performance, and real user value.`
+  summary: `Full-stack engineer with end-to-end experience across frontend, backend, QA, and support. I build scalable React/Next.js + Django/FastAPI applications and ship impactful features—from AI video generation to incident-tracking systems and secure payment flows—focused on reliability and real user value.`
 };
 
 export interface SkillCategory { title: string; items: string[] }
@@ -26,7 +26,7 @@ export interface Project { title: string; description: string; tech: string[]; l
 export const projects: Project[] = [
   {
     title: 'Automatic Video Generating AI Engine',
-    description: 'Production-ready automated video content pipeline: FastAPI backend + React/Vite dashboard orchestrating end-to-end short-form video generation. Integrates AI-powered ideation, script generation, asset sourcing, programmatic editing, and rendering—reducing manual video production time by 90% and enabling scalable content creation workflows.',
+    description: 'Production-ready automated video content pipeline. FastAPI workers + React/Vite dashboard orchestrate ideation, scripting, asset sourcing, editing, and rendering—cutting manual video creation time by 90% and enabling daily batch drops with audit trails.',
     tech: [
       'React',
       'TypeScript',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Intelligent Operations Workflow Assistant',
-    description: 'Enterprise-grade incident response platform: FastAPI backend + Next.js dashboard enabling real-time event ingestion, automatic incident detection, and AI-assisted classification. Processes thousands of events per minute with sub-second response times, reducing mean time to resolution (MTTR) through intelligent prioritization and automated triage workflows.',
+    description: 'Enterprise incident response platform combining FastAPI ingestion services with a Next.js dashboard. Handles thousands of events per minute with sub-second triage, AI-assisted severity scoring, and automated playbooks that shrink MTTR for on-call teams.',
     tech: [
       'Next.js',
       'React',
@@ -75,7 +75,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Trello‑inspired kanban task manager',
-    description: 'Lightweight, open-source task management app with visual boards, lists, and cards for flexible organization. Built with React and TypeScript for planning personal projects or small teams.',
+    description: 'Lightweight, open-source kanban tool with visual boards, lists, and cards for small teams. Built with React + TypeScript + Context API for snappy offline-friendly planning with zero backend.',
     tech: [
       'React',
       'TypeScript',
@@ -97,7 +97,7 @@ export const projects: Project[] = [
   {
   title: 'File Locker – Secure File Hiding Desktop App',
   description:
-    'Desktop application to securely hide and manage files with OTP-based email verification for sign-up and login. Supports hiding/unhiding files, backed by a MySQL database and a user-friendly Java Swing GUI.',
+    'Desktop application to securely hide and manage files with OTP-based email verification for sign-up and login. Adds instant hide/unhide workflows on top of a MySQL datastore with a Java Swing UI.',
   tech: [
     'Java',
     'Java Swing',
@@ -126,28 +126,40 @@ export const experience: ExperienceItem[] = [
     timeframe: '2021 – 2023',
     role: 'Full-Time Frontend & QA Engineer',
     org: 'Goonfol Technologies',
-    summary: 'Full-time engineer owning frontend delivery and regression QA for customer portals; reduced API latency 25% through caching/query tuning and lifted release confidence with automated test suites.',
-    details: [ 'Built scalable endpoints and data models', 'Improved API performance via caching & query tuning', 'Expanded automated regression coverage by 40% with Cypress and Postman suites' ]
+    summary: 'Owned delivery for multi-tenant customer portals—pairing React frontends with Python/Java services and raising release confidence through test automation and performance tuning.',
+    details: [
+      'Launched 10+ customer-facing modules covering onboarding, billing, and analytics dashboards',
+      'Reduced API latency 25% via query tuning and Redis caching while keeping error budgets green',
+      'Expanded automated regression coverage by 40% with Cypress, Playwright, and Postman collections'
+    ]
   },
   {
     timeframe: '2023 – 2025',
     role: 'Post-Graduate Certificate in Full-Stack Software Development',
     org: 'Lambton College, Toronto',
-    summary: 'Completed intensive Post-Graduate Certificate in modern full-stack engineering with hands-on Work-Integrated Learning (WIL) project. Mastered React, Node.js, databases, and cloud deployment through real-world application development.',
-    details: [ 'Led frontend development on WIL project using React, TypeScript, and modern state management patterns', 'Collaborated in agile teams to deliver production-ready features with code reviews and CI/CD practices', 'Applied software engineering principles: clean code, testing, version control, and deployment automation' ]
+    summary: 'Intensive Full-Stack Software Development program culminating in a Work-Integrated Learning capstone focused on React/Node SaaS delivery.',
+    details: [
+      'Led frontend development on the WIL capstone using React, TypeScript, Zustand, and component testing',
+      'Integrated Node.js + PostgreSQL services with CI/CD pipelines and cloud deployments on Vercel/Railway',
+      'Mentored peers on clean code, accessibility, and developer experience practices'
+    ]
   },
   {
     timeframe: 'August – October 2025',
     role: 'Software Engineer Intern',
     org: 'Vibes Meet LLC',
-    summary: 'Full-stack mobile and backend engineering for production social video platform serving active users. Delivered critical features including adaptive video streaming, payment integrations, and cloud infrastructure optimizations.',
-    details: [ 'Developed adaptive video player with real-time caption overlays and multi-quality streaming, improving playback reliability by 35%', 'Architected cloud storage and CDN delivery workflows reducing media load times by 40% and cutting infrastructure costs', 'Integrated comprehensive payment solutions (Apple Pay, Google Pay, Stripe) processing transactions with 99.9% success rate' ]
+    summary: 'Full-stack mobile + backend engineering for a social video platform—owning streaming reliability, payments, and infrastructure optimization.',
+    details: [
+      'Developed adaptive video player with real-time captions and multi-bitrate streaming, improving playback reliability by 35%',
+      'Architected cloud storage + CDN workflows that reduced media load times by 40% and trimmed storage spend',
+      'Integrated Apple Pay, Google Pay, Stripe, and card payments with 99.9% transaction success and detailed analytics dashboards'
+    ]
   }
 ];
 
 export const contactCTA = {
   headline: '🚀 Open to Software Engineer roles (Frontend/Full-Stack) in Canada',
-  subheadline: 'Seeking opportunities to build impactful products with modern technologies. Passionate about clean code, user experience, and scalable architecture.',
+  subheadline: 'I love partnering with product and design teams to ship measurable outcomes—clean code, real user empathy, and scalable systems.',
   email: 'almamun.codes@gmail.com',
   linkedin: 'https://linkedin.com/in/almamun-in'
 };
