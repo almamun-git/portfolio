@@ -74,8 +74,8 @@ export const projects: Project[] = [
     highlight: 'AI-powered incident triage'
   },
   {
-    title: 'Task Manager',
-    description: 'A React and TypeScript task management application using Context API for global state management and Session Storage for client-side persistence—delivering a responsive, DaisyUI-styled interface for creating, updating, and tracking tasks across a browsing session.',
+    title: 'Trello‑inspired kanban task manager',
+    description: 'Lightweight, open-source task management app with visual boards, lists, and cards for flexible organization. Built with React and TypeScript for planning personal projects or small teams.',
     tech: [
       'React',
       'TypeScript',
@@ -92,7 +92,7 @@ export const projects: Project[] = [
       github: 'https://github.com/almamun-git/to-do',
       demo: 'https://taskmanager-mamun.netlify.app/'
     },
-    highlight: 'Context-driven task state with session-backed persistence'
+    highlight: 'Visual boards and flexible task organization'
   },
   {
   title: 'File Locker – Secure File Hiding Desktop App',
