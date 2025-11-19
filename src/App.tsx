@@ -34,7 +34,12 @@ function App() {
                 {profile.summary}
               </p>
               <ul className="flex flex-wrap gap-3 text-sm">
-                <li className="tag">Toronto, Canada</li>
+                <li className="tag inline-flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                  </svg>
+                  Toronto, Canada (GMT-5)
+                </li>
               </ul>
               <div className="flex flex-wrap gap-4 pt-3 text-sm">
                 <a className="inline-flex items-center gap-2 rounded-full bg-primary-600 text-white px-5 py-2 text-sm font-medium shadow hover:bg-primary-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/60" href="mailto:almamun.codes@gmail.com">

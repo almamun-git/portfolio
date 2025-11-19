@@ -146,7 +146,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     timeframe: 'August – October 2025',
-    role: 'Software Engineer Intern',
+    role: 'React Native Software Engineer Intern',
     org: 'Vibes Meet LLC',
     summary: 'Full-stack mobile + backend engineering for a social video platform—owning streaming reliability, payments, and infrastructure optimization.',
     details: [
