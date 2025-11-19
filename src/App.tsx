@@ -81,7 +81,7 @@ function App() {
                     <p className="text-xs text-neutral-600 dark:text-neutral-400">Payment uptime</p>
                   </div>
                 </div>
-                <a href="/Resume.pdf" download target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/60">
+                <a href="/resume.pdf" download="Al_Mamun_Resume.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/60">
                   Download resume
                 </a>
               </div>
