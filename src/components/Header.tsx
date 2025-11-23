@@ -5,8 +5,8 @@ const NAV = ['About','Skills','Projects','Experience','Contact'];
 
 export function Header() {
   return (
-  <div className="mx-2 sm:mx-4 mt-4 lg:mt-5">
-    <header className="sticky top-3 z-30 container-section flex items-center justify-between py-4 px-3 sm:px-4 gap-6 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-neutral-900/70 border border-neutral-200/60 dark:border-neutral-800 rounded-xl transition-all duration-300">
+    <>
+      <header className="fixed top-0 left-0 right-0 z-30 container-section flex items-center justify-between py-4 px-3 sm:px-4 gap-6 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-neutral-900/70 border border-neutral-200/60 dark:border-neutral-800 rounded-xl transition-all duration-300">
       <a href="#home" className="font-semibold tracking-tight text-lg whitespace-nowrap">
         {profile.name.split(' ')[0]} <span className="text-primary-600 dark:text-primary-400">Apu</span>
       </a>
@@ -26,7 +26,9 @@ export function Header() {
           Contact
         </a>
       </div>
-    </header>
-  </div>
+      </header>
+      {/* spacer to preserve layout when header is fixed */}
+      <div aria-hidden className="h-20 sm:h-16" />
+    </>
   );
 }
