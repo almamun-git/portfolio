@@ -14,8 +14,9 @@ export const AnimatedTitles = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isWaiting, setIsWaiting] = useState(false);
 
-  // Check for reduced motion preference
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Check for reduced motion preference (guard window for SSR/test environments)
+  const prefersReducedMotion =
+    typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const updateText = useCallback(() => {
     const currentTitle = titles[currentIndex];
@@ -63,7 +64,8 @@ export const AnimatedTitles = () => {
   }, [currentIndex, displayedText, isDeleting, isWaiting, prefersReducedMotion]);
 
   useEffect(() => {
-    updateText();
+    const cleanup = updateText();
+    return cleanup;
   }, [updateText]);
 
   return (
