@@ -8,6 +8,7 @@ on:
 
 jobs:
   test:
+    name: Test (matrix)
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -33,25 +34,16 @@ jobs:
       - name: Run tests (coverage)
         run: npm run test:coverage
 
-      - name: Build
-        run: npm run build
-
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
           files: ./coverage/*.json
           flags: unittests
           fail_ci_if_error: false
-name: CI
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
   build:
+    name: Build and upload artifact
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -63,7 +55,7 @@ jobs:
           cache: 'npm'
       - name: Install deps
         run: npm ci
-      - name: Lint
+      - name: Lint (non-blocking)
         run: npm run lint --if-present || echo "No lint script"
       - name: Build
         run: npm run build
