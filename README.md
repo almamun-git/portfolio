@@ -1,5 +1,9 @@
 # Abdullah Al Mamun Apu – Developer Portfolio
 
+[![CI](https://github.com/almamun-git/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/almamun-git/portfolio/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/almamun-git/portfolio/branch/main/graph/badge.svg)](https://codecov.io/gh/almamun-git/portfolio)
+[![license](https://img.shields.io/github/license/almamun-git/portfolio.svg)](https://github.com/almamun-git/portfolio/blob/main/LICENSE)
+
 A modern, single-page portfolio built with **Vite + React + TypeScript + Tailwind CSS**. Designed for recruiters and hiring managers: fast, accessible, mobile-first, and content structured for quick scanning.
 
 ## 🔍 Features
