@@ -10,6 +10,7 @@ import { Suspense, lazy } from 'react';
 const ProjectsGrid = lazy(() => import('./components/ProjectsGrid').then(m => ({ default: m.ProjectsGrid })));
 import { ContactForm } from './components/ContactForm';
 import { AnimatedTitles } from './components/AnimatedTitles';
+import { Articles } from './components/Articles';
 
 
 function App() {
@@ -134,6 +135,10 @@ function App() {
               <ProjectsGrid />
             </Suspense>
           </ErrorBoundary>
+        </Section>
+
+        <Section id="articles" subtitle="Writing" title="Articles & Writing">
+          <Articles />
         </Section>
 
         <Section id="experience" subtitle="Experience" title="Professional Timeline">

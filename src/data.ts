@@ -113,6 +113,19 @@ export const projects: Project[] = [
 }
 ];
 
+export interface Article { title: string; excerpt?: string; url: string; date?: string; tags?: string[]; source?: string }
+// Add your Medium articles here. Update the `url` field to the real Medium link.
+export const articles: Article[] = [
+  {
+    title: 'Software Design Patterns — Factory, Singleton, Builder, Adapter & More',
+    excerpt: 'A concise walkthrough of common design patterns with practical examples and UML diagrams: Factory Method, Abstract Factory, Singleton, Builder, Prototype, Adapter, Decorator, and Strategy.',
+    url: 'https://medium.com/@aalmamunapu/software-design-pattern-f62ac02e89cc',
+    date: 'Mar 26, 2025',
+    tags: ['Design Patterns', 'Architecture', 'OOP', 'Object-Oriented Design', 'Backend Development'],
+    source: 'Medium'
+  }
+];
+
 export interface ExperienceItem { timeframe: string; role: string; org: string; summary: string; details?: string[] }
 export const experience: ExperienceItem[] = [
   {
