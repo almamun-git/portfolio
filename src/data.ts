@@ -129,16 +129,6 @@ export const articles: Article[] = [
 export interface ExperienceItem { timeframe: string; role: string; org: string; summary: string; details?: string[] }
 export const experience: ExperienceItem[] = [
   {
-    timeframe: 'November 2025 – Present',
-    role: 'Intermediate Frontend Developer',
-    org: 'Futuretalk Inc.',
-    summary: 'Frontend developer contributing to an AI-driven learning platform, focusing on conversational user interfaces and real-time voice-enabled experiences.',
-    details: [
-      'Developing React + Next.js interfaces for AI-powered learning sessions, quizzes, and mastery workflows used by active learners',
-      'Integrated ElevenLabs voice APIs with dynamic variable assignment and JSON-path mappings to enable real-time spoken AI interactions'
-    ]
-  },
-  {
     timeframe: '2016 – 2021',
     role: 'B.Sc. in Computer Science & Engineering',
     org: 'East West University',
@@ -176,6 +166,17 @@ export const experience: ExperienceItem[] = [
       'Developed adaptive video player with real-time captions and multi-bitrate streaming, improving playback reliability by 35%',
       'Architected cloud storage + CDN workflows that reduced media load times by 40% and trimmed storage spend',
       'Integrated Apple Pay, Google Pay, Stripe, and card payments with 99.9% transaction success and detailed analytics dashboards'
+    ]
+  }
+  ,
+  {
+    timeframe: 'November 2025 – Present',
+    role: 'Intermediate Frontend Developer',
+    org: 'Futuretalk Inc.',
+    summary: 'Frontend developer contributing to an AI-driven learning platform, focusing on conversational user interfaces and real-time voice-enabled experiences.',
+    details: [
+      'Developing React + Next.js interfaces for AI-powered learning sessions, quizzes, and mastery workflows used by active learners',
+      'Integrated ElevenLabs voice APIs with dynamic variable assignment and JSON-path mappings to enable real-time spoken AI interactions'
     ]
   }
 ];
