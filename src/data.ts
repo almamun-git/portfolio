@@ -14,11 +14,12 @@ export const profile = {
 
 export interface SkillCategory { title: string; items: string[] }
 export const skills: SkillCategory[] = [
-  { title: 'Frontend', items: ['React', 'Next.js', 'React Native', 'Redux', 'TypeScript', 'JavaScript', 'Tailwind CSS'] },
+  { title: 'Frontend', items: ['React', 'Next.js', 'React Native','Context API', 'Zustand', 'Redux','Conversational UI', 'Tailwind CSS'] },
   { title: 'Backend', items: ['Node.js', 'Django/DRF', 'FastAPI', 'Spring Boot', 'REST APIs', 'Python'] },
   { title: 'Databases', items: ['MySQL', 'MongoDB', 'PostgreSQL', 'PL/SQL', 'SQLAlchemy'] },
   { title: 'Testing & QA', items: ['Cypress', 'Postman', 'Automated Testing', 'Regression Testing', 'API Testing'] },
   { title: 'Tools & Cloud', items: ['Git/GitHub', 'Jira', 'AWS (S3, CloudFront)', 'Docker', 'CI/CD', 'Vercel', 'Railway'] },
+  { title: 'AI & Integrations', items: ['AI Interface Integration', 'Dynamic Variable Mapping (JSON Path)', 'Real-time AI Interaction', 'Third-party AI APIs (ElevenLabs)'] },
   { title: 'Other', items: ['Agile', 'OOP', 'Design Patterns', 'Payment Integration (Stripe)', 'Machine Learning basics (TensorFlow, PyTorch, Scikit-learn)'] }
 ];
 
