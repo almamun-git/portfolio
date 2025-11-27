@@ -14,7 +14,7 @@ export const profile = {
 
 export interface SkillCategory { title: string; items: string[] }
 export const skills: SkillCategory[] = [
-  { title: 'Frontend', items: ['React', 'Next.js', 'React Native','Context API', 'Zustand', 'Redux','Conversational UI', 'Tailwind CSS'] },
+  { title: 'Frontend', items: ['React', 'Next.js', 'React Native','Context API', 'Zustand', 'Redux','Tailwind CSS','Conversational UI'] },
   { title: 'Backend', items: ['Node.js', 'Django/DRF', 'FastAPI', 'Spring Boot', 'REST APIs', 'Python'] },
   { title: 'Databases', items: ['MySQL', 'MongoDB', 'PostgreSQL', 'PL/SQL', 'SQLAlchemy'] },
   { title: 'Testing & QA', items: ['Cypress', 'Postman', 'Automated Testing', 'Regression Testing', 'API Testing'] },
