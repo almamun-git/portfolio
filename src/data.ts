@@ -46,7 +46,7 @@ export const projects: Project[] = [
     ],
     links: {
       github: 'https://github.com/almamun-git/automatic-video-generating-ai-engine',
-      demo: 'https://autovidai-web.onrender.com'
+      demo: 'https://automatic-video-generating-ai-engine-3.onrender.com/'
     },
     highlight: 'AI-orchestrated 5-stage video production'
   },
